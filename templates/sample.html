@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+Map Reduce Sample
+{% endblock %}
+
+{% block header %}
+Map Reduce Sample
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" charset="utf-8" src="/static/js/sh_main.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/js/sh_html.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+	sh_highlightDocument();
+});
+</script>
+{% endblock %}
+
+{% block content %}
+<p>
+	To implement the map reduce client in your website, just put the following just before the &lt;body&gt; tag.
+</p>
+<pre class="sh_html">
+&lt;script type="text/javascript" src="http://bbmapreduce.appspot.com/client/wrapper/sdfjkh3458sdf"&gt;&lt;/script&gt;
+</pre>
+{% endblock %}

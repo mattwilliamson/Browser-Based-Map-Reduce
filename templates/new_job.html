@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}
+New Mapreduce Job
+{% endblock %}
+
+{% block styles %}
+<style type="text/css" media="screen">
+#form_table, input, textarea {
+	width: 90%;
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="/static/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+	function checkTitle() {
+		var title = $('#id_name').val();
+		
+		if(title.replace(/\s/g, '') == '') return false;
+			
+		return true;
+	}
+	
+	function checkMap() {
+		var map = $('#id_map').val();
+		var mapFun = null;
+		
+		if(map.replace(/\s/g, '') == '') return false;
+	
+		try {
+			mapFun = map.replace(/\r|\n|\r\n/g, '');
+			mapFun = '(' + mapFun + ')';
+			mapFun = eval(mapFun);
+		} catch(e) {
+			return false;
+		}
+		
+		return typeof(mapFun) == 'function';
+	}
+	
+	function checkReduce() {
+		var reduce = $('#id_reduce').val();
+		var reduceFun = null;
+		var isValid = true;
+		
+		if(reduce == '') {
+			return true;
+		}
+	
+		try {
+			reduceFun = reduce.replace(/\r|\n/g, '');
+			reduceFun = '(' + reduceFun + ')';
+			reduceFun = eval(reduceFun);
+		} catch(e) {
+			isValid = false;
+		}
+		
+		isValid = isValid && typeof(reduceFun) == 'function';
+		
+		return isValid;
+	}
+	
+	function checkData() {
+		var data = $('#id_data').val();
+		
+		data = data.replace(/\r|\r\n/g, '\n');
+		
+		if(data == '' || data.indexOf('\n') == -1) {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	$('#new_job_form').submit(function(){
+		if(!checkTitle()) {
+			alert('This job needs a name!');
+			return false;
+		}
+		
+		if(!checkMap()) {
+			alert('The map function needs to be a valid javascript function.');
+			return false;
+		}
+		
+		if(!checkReduce()) {
+			alert('The reduce function needs to be either a valid javascript function or blank.');
+			return false;
+		}
+		
+		if(!checkData()) {
+			alert('The data field needs to be a list of values, one per line.');
+			return false;
+		}
+	});
+});
+</script>
+{% endblock %}
+
+{% block content %}
+<form id="new_job_form" method="POST">
+	<table id="form_table">
+		{{ form }}
+	</table>
+	<p>
+		<input type="submit" value="Submit Job" id="id_submit">
+	</p>
+</form>
+{% endblock %}

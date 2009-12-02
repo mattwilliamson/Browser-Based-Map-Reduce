@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/css/sh_style.css" type="text/css"></link>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" charset="utf-8" src="/static/js/sh_main.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/js/sh_javascript.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+		sh_highlightDocument();
+	});
+</script>
+{% endblock %}
+
+{% block title %}
+View Mapreduce Job {{ job.name }}
+{% endblock %}
+
+{% block header %}
+Viewing Map Reduce Job &quot;{{ job.name }}&quot;
+{% endblock %}
+
+{% block content %}
+<table border="1" cellspacing="0" cellpadding="5">
+	<tr>
+		<td>Created at:</td>
+		<td>{{ job.created_at }}</td>
+	</tr>
+	<tr>
+		<td>Map Done:</td>
+		<td>
+			{% if job.map_is_done %}
+				<img src="/static/images/apply.png" alt="Done" align="middle" /> Done!
+			{% else %}
+				<img src="/static/images/exec.png" alt="Processing..." align="middle" /> Queued...
+			{% endif %}
+		</td>
+	</tr>
+	<!--
+	<tr>
+		<td>Reduce Done:</td>
+		<td>
+			{% if job.reduce_is_done %}
+				<img src="/static/images/apply.png" alt="Done" align="middle" /> Done!
+			{% else %}
+				<img src="/static/images/exec.png" alt="Processing..." align="middle" /> Queued...
+			{% endif %}
+		</td>
+	</tr>
+    -->
+	<tr>
+		<td>Map:</td>
+		<td>
+			<pre class="sh_javascript">{{ job.map }}</pre>
+		</td>
+	</tr>
+	<!--
+	<tr>
+		<td>Reduce:</td>
+		<td>
+			<pre class="sh_javascript">{{ job.reduce }}</pre>
+		</td>
+	</tr>
+	-->
+	<tr>
+		<td>Data:</td>
+		<td>
+			<pre id="name" style="height: 20em; overflow: auto; border: 1px #333 solid;">{{ job.data }}</pre>
+		</td>
+	</tr>
+	<tr>
+		<td>Result:</td>
+		<td>
+			<pre id="name" style="height: 20em; overflow: auto; border: 1px #333 solid;">{{ job.result }}</pre>
+		</td>
+	</tr>
+</table>
+{% endblock %}

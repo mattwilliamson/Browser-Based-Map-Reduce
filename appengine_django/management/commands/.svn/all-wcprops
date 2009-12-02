@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands
+END
+rollback.py
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/rollback.py
+END
+runserver.py
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/runserver.py
+END
+startapp.py
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/startapp.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/__init__.py
+END
+vacuum_indexes.py
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/vacuum_indexes.py
+END
+flush.py
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/flush.py
+END
+startapp.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/startapp.pyc
+END
+__init__.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/__init__.pyc
+END
+console.py
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/console.py
+END
+reset.py
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/reset.py
+END
+update.py
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/update.py
+END
+testserver.py
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/management/commands/testserver.py
+END

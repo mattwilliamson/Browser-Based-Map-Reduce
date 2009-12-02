@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth
+END
+decorators.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/decorators.pyc
+END
+templatetags.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/templatetags.py
+END
+middleware.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/middleware.py
+END
+templatetags.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/templatetags.pyc
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/__init__.py
+END
+middleware.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/middleware.pyc
+END
+__init__.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/__init__.pyc
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/tests.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/models.py
+END
+decorators.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/decorators.py
+END
+models.pyc
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/auth/models.pyc
+END

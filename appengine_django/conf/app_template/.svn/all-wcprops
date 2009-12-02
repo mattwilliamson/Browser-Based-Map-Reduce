@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/conf/app_template
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/conf/app_template/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/conf/app_template/__init__.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/conf/app_template/models.py
+END

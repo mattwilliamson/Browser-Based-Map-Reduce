@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Browser-Based Map Reduce Engine</title>
+		<script type="text/javascript" src="/static/js/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+		<script type="text/javascript" charset="utf-8">
+		$(function(){
+			if(typeof(DDMapreduce) == 'undefined') {
+				var DDMapreduce = {
+					debug: true,
+					url: '',
+					scheduleTime: 1000,
+					noWorkTimeout: 10000,
+					cookieName: 'agreed',
+					cookieTimeout: 15, //days
+					getWork: function() {
+						// Retrieve object like {'exec':function(data){return doSomething(data);}, 'data': ['a', 'b', 'c']}
+						if(DDMapreduce.debug) console.debug('Getting Work...');
+						
+						$.get(DDMapreduce.url + '/client/work/', DDMapreduce.doWork);
+					},
+					reportError: function(errorName, errorString) {
+						if(DDMapreduce.debug) console.debug('Reporting error: ' + errorName + ', ' + errorString);
+		
+						$.post(DDMapreduce.url + '/client/error/', {errorName: errorName, errorString: errorString});
+					},
+					reportResults: function(timeElapsed, results, bbdata) {
+						if(DDMapreduce.debug) console.debug('Reporting results... time elapsed in seconds: ' + timeElapsed + ', results:');
+						if(DDMapreduce.debug) console.debug(results);
+		
+						$.post(DDMapreduce.url + '/client/submit/', {jobId: bbdata.job_id, dataId: bbdata.data_id, timeElapsed: timeElapsed, results: results});
+					},
+					doWork: function(bbdata) {
+						if(DDMapreduce.debug) console.debug('Performing work...');
+		
+						var start = new Date();
+		
+						try {
+							bbdata = eval('(' + bbdata + ')');
+							
+							if(!bbdata.isGood) {
+								if(DDMapreduce.debug) console.debug('No work...');
+								
+								// No work
+								DDMapreduce.scheduleDelayedWork();
+								
+								return false;
+							}
+						} catch(error) {
+							DDMapreduce.reportError('evaluate', error.toString());
+							DDMapreduce.scheduleWork();
+							return false; // Don't try to execute
+						}
+						
+						try {
+							var fun = eval('(' + bbdata.exec +')');
+							var results = fun(bbdata.data);
+							var finish = new Date();
+							var timeElapsed = finish - start;
+		
+							DDMapreduce.reportResults(timeElapsed, results, bbdata);
+						} catch(error) {
+							DDMapreduce.reportError('execute', error.toString());
+						}
+		
+						DDMapreduce.scheduleWork();
+					},
+					scheduleWork: function() {
+						if(DDMapreduce.debug) console.debug('Scheduling work...');
+		
+						setTimeout(DDMapreduce.getWork, DDMapreduce.scheduleTime);
+					},
+					scheduleDelayedWork: function() {
+						if(DDMapreduce.debug) console.debug('Scheduling delayed work...');
+		
+						setTimeout(DDMapreduce.getWork, DDMapreduce.noWorkTimeout);
+					}
+				};
+			}
+
+			DDMapreduce.agreedCookie = $.cookie(DDMapreduce.cookieName);
+			DDMapreduce.agreed = DDMapreduce.agreedCookie == 'yes';
+
+			if(!DDMapreduce.agreed && (DDMapreduce.agreedCookie == null)) {
+				DDMapreduce.agreed = confirm('Click OK if you agree to donate computer processing time to the Browser -Based Map Reduce project. The longer you visit this website the more you will donate automatically. You can see more information at http://bbmapreduce.appspot.com/');
+				DDMapreduce.expires = new Date();
+				DDMapreduce.expires = DDMapreduce.expires.setTime(DDMapreduce.expires.getTime() + (DDMapreduce.cookieTimeout * 24 * 60 * 60 * 1000));
+				DDMapreduce.textAgrees = DDMapreduce.agreed ? 'yes' : 'no';
+				$.cookie(DDMapreduce.cookieName, DDMapreduce.textAgrees, {expires: DDMapreduce.expires});
+			}
+	
+			if(DDMapreduce.agreed) {
+				DDMapreduce.scheduleWork();
+			}
+		});
+		</script>
+		</head>
+	<body>
+		<div>&nbsp;</div>
+	</body>
+</html>

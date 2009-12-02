@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/tests
+END
+serialization_test.py
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/tests/serialization_test.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/tests/__init__.py
+END
+model_test.py
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/tests/model_test.py
+END
+commands_test.py
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/tests/commands_test.py
+END
+memcache_test.py
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/tests/memcache_test.py
+END
+db_test.py
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/tests/db_test.py
+END
+core_test.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/trunk/!svn/ver/245/Contracting/brunchcritic1/appengine_django/tests/core_test.py
+END

@@ -1,0 +1,45 @@
+8
+
+dir
+245
+http://mwilliamson@dawsdesign.com/trunk/Contracting/brunchcritic1/appengine_django/sessions
+http://mwilliamson@dawsdesign.com/trunk
+
+
+
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+
+
+svn:special svn:externals svn:needs-lock
+
+__init__.py
+file
+
+
+
+
+2008-07-12T16:10:55.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+has-props
+
+backends
+dir
+
+models.py
+file
+
+
+
+
+2008-07-12T16:10:55.000000Z
+c58b6c74547bf6482419fb7d47c02ecb
+2009-05-14T13:43:34.188346Z
+245
+mwilliamson
+has-props
+
