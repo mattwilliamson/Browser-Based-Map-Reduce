@@ -10,7 +10,6 @@ indexes:
 # automatically uploaded to the admin console when you next deploy
 # your application using appcfg.py.
 
-# Used 1983 times in query history.
 - kind: Job
   properties:
   - name: map_is_done
