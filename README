@@ -3,3 +3,5 @@ Browser-Based Map Reduce
 This is a proof of concept browser-based distributed map reduce system. This allows administrators to write javascript functions and insert a list of data and have visitors to websites implementing the script to have their clients automatically run that function against as many of those pieces of data in possible.
 
 Please be warned that this script poses a security risk and is just a proof of concept. Security has not been the primary concern. I am not responsible for any damages this system causes as a result of your use.
+
+Try it out at http://bbmapreduce.appspot.com/ on Google App Engine.
